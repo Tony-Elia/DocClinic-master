@@ -1,0 +1,7 @@
+{
+    "custom": [{
+        "filename": ".htaccess",
+        "path": "root"
+    }],
+    "version": "2.4"
+}

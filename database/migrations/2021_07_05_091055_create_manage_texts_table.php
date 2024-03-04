@@ -1,0 +1,169 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateManageTextsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('manage_texts', function (Blueprint $table) {
+            $table->id();
+            $table->text('appointment_modal_title')->default('appointment_modal_title');
+            $table->text('appointment_submit_btn')->default('appointment_submit_btn');
+            $table->text('appointment_close_btn')->default('appointment_close_btn');
+            $table->text('doctor_search_btn')->default('doctor_search_btn');
+            $table->text('service_learn_more')->default('service_learn_more');
+            $table->text('service_btn')->default('service_btn');
+            $table->text('department_btn')->default('department_btn');
+            $table->text('subscribe_btn')->default('subscribe_btn');
+            $table->text('email_address')->default('email_address');
+            $table->text('phone')->default('phone');
+            $table->text('address')->default('address');
+            $table->text('footer_about_us')->default('footer_about_us');
+            $table->text('footer_importent_link')->default('footer_importent_link');
+            $table->text('footer_recent_post')->default('footer_recent_post');
+            $table->text('department_read_more_btn')->default('department_read_more_btn');
+            $table->text('department_doctor')->default('department_doctor');
+            $table->text('frequently_ask_questions')->default('frequently_ask_questions');
+            $table->text('related_video')->default('related_video');
+            $table->text('quick_contact')->default('quick_contact');
+            $table->text('blog_learn_more')->default('blog_learn_more');
+            $table->text('blog_category')->default('blog_category');
+            $table->text('blog_recent_post')->default('blog_recent_post');
+            $table->text('comments')->default('comments');
+            $table->text('get_comment')->default('get_comment');
+            $table->text('comment_submit_btn')->default('comment_submit_btn');
+            $table->text('send_msg_btn')->default('send_msg_btn');
+            $table->text('appointment_fee')->default('appointment_fee');
+            $table->text('doctor_info')->default('doctor_info');
+            $table->text('doctor_working_hours')->default('doctor_working_hours');
+            $table->text('doctor_address')->default('doctor_address');
+            $table->text('doctor_education')->default('doctor_education');
+            $table->text('doctor_experience')->default('doctor_experience');
+            $table->text('doctor_qualification')->default('doctor_qualification');
+            $table->text('doctor_book_appointment')->default('doctor_book_appointment');
+            $table->text('doctor_book_appointment_title')->default('doctor_book_appointment_title');
+            $table->text('login_btn')->default('login_btn');
+            $table->text('login_text')->default('login_text');
+            $table->text('register_btn')->default('register_btn');
+            $table->text('register_text')->default('register_text');
+            $table->text('forget_pass_btn')->default('forget_pass_btn');
+            $table->text('forget_pass_text')->default('forget_pass_text');
+            $table->text('reset_pass_btn')->default('reset_pass_btn');
+            $table->text('reset_pass_text')->default('reset_pass_text');
+            $table->text('appointment_list')->default('appointment_list');
+            $table->text('pay_now')->default('pay_now');
+            $table->text('stripe')->default('stripe');
+            $table->text('stripe_btn')->default('stripe_btn');
+            $table->text('paypal')->default('paypal');
+            $table->text('paypal_btn')->default('paypal_btn');
+            $table->text('bank_transfer')->default('bank_transfer');
+            $table->text('bank_transfer_btn')->default('bank_transfer_btn');
+            $table->text('bank_account_info')->default('bank_account_info');
+            $table->text('transaction_info')->default('transaction_info');
+            $table->text('total_order')->default('total_order');
+            $table->text('total_appointment')->default('total_appointment');
+            $table->text('pending_appointment')->default('pending_appointment');
+            $table->text('dashboard')->default('dashboard');
+            $table->text('message')->default('message');
+            $table->text('send_message_btn')->default('send_message_btn');
+            $table->text('account_info')->default('account_info');
+            $table->text('order_list')->default('order_list');
+            $table->text('change_password')->default('change_password');
+            $table->text('logout')->default('logout');
+            $table->text('update_profile_btn')->default('update_profile_btn');
+            $table->text('patient_id')->default('patient_id');
+            $table->text('order_info')->default('order_info');
+            $table->text('appointment_history')->default('appointment_history');
+            $table->text('billing_info')->default('billing_info');
+            $table->text('pyshical_info')->default('pyshical_info');
+            $table->text('prescribe')->default('prescribe');
+            $table->text('advice')->default('advice');
+            $table->text('post_not_found')->default('post_not_found');
+            $table->text('doctor_not_found')->default('doctor_not_found');
+
+            $table->text('schedule_not_found')->default('schedule_not_found');
+            $table->text('select_department')->default('select_department');
+            $table->text('select_doctor')->default('select_doctor');
+            $table->text('select_date')->default('select_date');
+            $table->text('select_location')->default('select_location');
+            $table->text('admin')->default('admin');
+            $table->text('week_day')->default('week_day');
+            $table->text('schedule')->default('schedule');
+            $table->text('doctor')->default('doctor');
+            $table->text('department')->default('department');
+            $table->text('location')->default('location');
+            $table->text('action')->default('action');
+            $table->text('total')->default('total');
+            $table->text('card_number')->default('card_number');
+            $table->text('cvc')->default('cvc');
+            $table->text('expiration_month')->default('expiration_month');
+            $table->text('expiration_year')->default('expiration_year');
+            $table->text('name')->default('name');
+            $table->text('guardian_name')->default('guardian_name');
+            $table->text('guardian_phone')->default('guardian_phone');
+            $table->text('patient_age')->default('patient_age');
+            $table->text('occupation')->default('occupation');
+            $table->text('gender')->default('gender');
+            $table->text('country')->default('country');
+            $table->text('city')->default('city');
+            $table->text('photo')->default('photo');
+            $table->text('date_of_birth')->default('date_of_birth');
+            $table->text('weight')->default('weight');
+            $table->text('height')->default('height');
+            $table->text('helth_insurance_number')->default('helth_insurance_number');
+            $table->text('helth_card_number')->default('helth_card_number');
+            $table->text('helth_card_provider')->default('helth_card_provider');
+            $table->text('blood_group')->default('blood_group');
+            $table->text('disablities')->default('disablities');
+            $table->text('Serial_number')->default('Serial_number');
+            $table->text('date')->default('date');
+            $table->text('payment')->default('payment');
+            $table->text('treated')->default('treated');
+            $table->text('order_id')->default('order_id');
+            $table->text('payment_method')->default('payment_method');
+            $table->text('transaction_id')->default('transaction_id');
+            $table->text('description')->default('description');
+            $table->text('blood_pressure')->default('blood_pressure');
+            $table->text('pulse_rate')->default('pulse_rate');
+            $table->text('temperature')->default('temperature');
+            $table->text('habits')->default('habits');
+            $table->text('problems')->default('problems');
+            $table->text('medicine_type')->default('medicine_type');
+            $table->text('medicine_name')->default('medicine_name');
+            $table->text('dosage')->default('dosage');
+            $table->text('day')->default('day');
+            $table->text('time')->default('time');
+            $table->text('test_description')->default('test_description');
+            $table->text('password')->default('password');
+            $table->text('confirm_password')->default('confirm_password');
+            $table->text('change_password_btn')->default('change_password_btn');
+            $table->text('subject')->default('subject');
+            $table->text('comment')->default('comment');
+            $table->text('select_schedule')->default('select_schedule');
+            $table->text('select_gender')->default('select_gender');
+            $table->text('male')->default('male');
+            $table->text('female')->default('female');
+            $table->text('others')->default('others');
+            $table->text('stripe_card_error')->default('Please correct the errors and try again.');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('manage_texts');
+    }
+}
