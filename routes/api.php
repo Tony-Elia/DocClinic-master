@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\LoginController;
 use App\Http\Controllers\API\RegisterController;
+use App\Http\Controllers\API\AppointmentController;
 use Maatwebsite\Excel\Row;
 
 /*
@@ -44,3 +45,9 @@ Route::post('/register-new', [RegisterController::class, 'register']);
 Route::post('/verify-otp', [RegisterController::class, 'verifyOtp']);
 
 Route::get('/doctors', [DoctorController::class, 'getAll']);
+Route::get('/doctors/{id}', [DoctorController::class, 'getDoctor']);
+
+//////   Appointment  //////
+Route::post('/appointments/create', [AppointmentController::class, 'createAppointmentApi']);
+
+Route::get('appointments/get/{id}', [AppointmentController::class, 'getAppointment']);

@@ -56,13 +56,11 @@ class AppointmentController extends Controller
 
     public function createAppointment(Request $request){
         $doctor_id=$request->doctor_id;
-        $department_id=$request->department_id;
         $date=$request->date;
         $schedule_id=$request->schedule_id;
 
         $schedule=Schedule::find($schedule_id);
         $doctor=Doctor::find($doctor_id);
-        $department=Department::find($department_id);
 
         $data['id']=rand(22,222);// it is mendetory
         $data['name']=$doctor->name;
@@ -70,7 +68,7 @@ class AppointmentController extends Controller
         $data['price']=$doctor->fee;
         $data['weight']=0; // it is mendetory
         $data['options']['doctor_id']=$doctor_id;
-        $data['options']['department']=$department->name;
+        $data['options']['department']=$doctor->department->name;
         $data['options']['location']=$doctor->location->location;
         $data['options']['date']=$date;
         $data['options']['time']=$schedule->start_time.'-'.$schedule->end_time;

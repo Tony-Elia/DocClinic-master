@@ -13,12 +13,19 @@ use App\Schedule;
 class DoctorController extends Controller
 {
     public function getAll() {
-        $doctors = Doctor::all();
-        foreach ($doctors as $doctor) {
-            $doctor->appointments;
-            $doctor->department;
-            $doctor->schedules;
+        return response()->json(Doctor::all(), 200);
+    }
+
+    public function getDoctor($id) {
+        $doctor = Doctor::find($id);
+
+        if(!($doctor)) return response()->json(["message" => "Error: Doctor ID not found", "status" => "Error"], 400);
+
+        $doctor->department; $doctor->appointments;
+        foreach ($doctor->schedules as $schedule) {
+            $schedule->day;
         }
-        return response()->json($doctors, 200);
+
+        return response()->json([$doctor]);
     }
 }
