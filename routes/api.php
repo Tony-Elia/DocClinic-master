@@ -4,9 +4,10 @@ use App\Doctor;
 use App\Http\Controllers\API\DoctorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\LoginController;
+use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\AppointmentController;
+use App\Http\Controllers\API\FAQController;
 use Maatwebsite\Excel\Row;
 
 /*
@@ -46,8 +47,15 @@ Route::post('/verify-otp', [RegisterController::class, 'verifyOtp']);
 
 Route::get('/doctors', [DoctorController::class, 'getAll']);
 Route::get('/doctors/{id}', [DoctorController::class, 'getDoctor']);
+Route::get('/search-doctor', [AppointmentController::class, 'searchDoctor']);
 
 //////   Appointment  //////
 Route::post('/appointments/create', [AppointmentController::class, 'createAppointmentApi']);
-
 Route::get('appointments/get/{id}', [AppointmentController::class, 'getAppointment']);
+Route::get('appointments/user/{id}', [AppointmentController::class, 'getUserAppointments']);
+
+/////   User   /////
+Route::get('users/{id}', [UserController::class, 'getUser']);
+
+/////   FAQs   /////
+Route::get('faq/get', [FAQController::class, 'getAll']);

@@ -98,4 +98,15 @@ class AppointmentController extends Controller
         return response()->json($doctors);
     }
 
+    public function getUserAppointments($id) {
+        $appointments = Appointment::where('user_id', $id)->get();
+        foreach ($appointments as $appointment) {
+            $appointment->schedule;
+            $appointment->day;
+            $appointment->doctor;
+        }
+        if($appointments)
+            return response()->json($appointments);
+        else return response()->json(["message" => "Invalid ID", "status" => "error"], 400);
+    }
 }
